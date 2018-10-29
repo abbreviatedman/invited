@@ -1,0 +1,19 @@
+main {
+    display: flex;
+}
+
+.wedding-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 700px;
+    width: 200px;
+}
+
+.wedding-preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 700px;
+    width: 200px;
+}
