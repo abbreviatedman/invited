@@ -1,6 +1,8 @@
 const handleFirstNameChange = (event) => {
-    document.querySelector('.first-name-preview').innerText = event.target.value
-}
+    const userText = event.target.value
+    const firstNamePreview = document.querySelector('.first-name-preview')
+
+    firstNamePreview.innerText = userText;
 
 const handleSecondNameChange = (event) => {
     document.querySelector('.second-name-preview').innerText = event.target.value
