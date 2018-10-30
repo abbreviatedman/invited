@@ -26,34 +26,36 @@ const handleLocationChange = (event) => {
     document.querySelector('.location-preview').innerText = event.target.value
 }
 
-const checkStyle = () => {
-    const classList = document.querySelector('wedding-preview').classList;
-    if (classList.containts('blood')) {
-        return 'blood'
-    }
+const getCurrentStyle = () => {
+    const classList = document.querySelector('.wedding-preview').classList;
+    const classArray = Array.from(classList)
+    return classArray[1]
 }
 
 const switchToStyleOne = () => {
+    const currentStyle = getCurrentStyle();
     const weddingPreview = document.querySelector('.wedding-preview')
-    const classList = weddingPreview.classList;
-    if (!classList.contains('blood')) {
-        if (classList.contains('white-wedding')) {
-            weddingPreview.classList.replace('white-wedding', 'blood')
-        }
-    }
+
+    weddingPreview.classList.replace(currentStyle, 'princess');
 }
 
 const switchToStyleTwo = () => {
-    const currentStyle = checkStyle();
+    const currentStyle = getCurrentStyle();
+    const weddingPreview = document.querySelector('.wedding-preview')
+
+    weddingPreview.classList.replace(currentStyle, 'goth');
 }
 
 const switchToStyleThree = () => {
-    const currentStyle = checkStyle();
+    const currentStyle = getCurrentStyle();
+    const weddingPreview = document.querySelector('.wedding-preview')
+
+    weddingPreview.classList.replace(currentStyle, 'bee');
 }
 
-function init() {
+const init = () => {
     document.addEventListener('DOMContentLoaded', () => {
-            document.querySelector('.first-name-input').addEventListener('keyup', handleFirstNameChange)
+        document.querySelector('.first-name-input').addEventListener('keyup', handleFirstNameChange)
         document.querySelector('.second-name-input').addEventListener('keyup', handleSecondNameChange)
         document.querySelector('.first-surname-input').addEventListener('keyup', handleFirstSurnameChange)
         document.querySelector('.second-surname-input').addEventListener('keyup', handleSecondSurnameChange)

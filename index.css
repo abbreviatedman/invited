@@ -30,10 +30,10 @@ main {
 
 .style-tabs {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
-.blood {
+.goth {
     color: white;
     background-color: darkred;
 }
