@@ -1,8 +1,12 @@
 const handleFirstNameChange = (event) => {
-    const userText = event.target.value
-    const firstNamePreview = document.querySelector('.first-name-preview')
+    // More explicit version!
+    // const userText = event.target.value
+    // const firstNamePreview = document.querySelector('.first-name-preview')
 
-    firstNamePreview.innerText = userText;
+    // firstNamePreview.innerText = userText;
+
+    // One-liner version!
+    document.querySelector('.first-name-preview').innerText = event.target.value
 }
 
 const handleSecondNameChange = (event) => {
@@ -43,7 +47,7 @@ const getCurrentStyle = () => {
 
 const switchToStyleOne = () => {
     const weddingPreview = document.querySelector('.wedding-preview')
-    const currentTabText = document.querySelector('.style-one-text')
+    const currentTabText = document.querySelector('.style-one-tab-text')
     const oldTabText = document.querySelector('.current')
 
     const currentStyle = getCurrentStyle();
@@ -55,7 +59,7 @@ const switchToStyleOne = () => {
 
 const switchToStyleTwo = () => {
     const weddingPreview = document.querySelector('.wedding-preview')
-    const currentTabText = document.querySelector('.style-two-text')
+    const currentTabText = document.querySelector('.style-two-tab-text')
     const oldTabText = document.querySelector('.current')
     
     const currentStyle = getCurrentStyle();
@@ -67,12 +71,13 @@ const switchToStyleTwo = () => {
 
 const switchToStyleThree = () => {
     const weddingPreview = document.querySelector('.wedding-preview')
-    const currentTabText = document.querySelector('.style-three-text')
+    const currentTabText = document.querySelector('.style-three-tab-text')
     const oldTabText = document.querySelector('.current')
     
     const currentStyle = getCurrentStyle();
 
     weddingPreview.classList.replace(currentStyle, 'bumblebee');
+    
     currentTabText.classList.toggle('current')
     oldTabText.classList.toggle('current')
 }
