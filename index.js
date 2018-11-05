@@ -77,7 +77,7 @@ const switchToStyleThree = () => {
     const currentStyle = getCurrentStyle();
 
     weddingPreview.classList.replace(currentStyle, 'bumblebee');
-    
+
     currentTabText.classList.toggle('current')
     oldTabText.classList.toggle('current')
 }
@@ -89,9 +89,9 @@ const init = () => {
         document.querySelector('.date-input').addEventListener('keyup', handleDateChange)
         document.querySelector('.location-input').addEventListener('keyup', handleLocationChange)
 
-        document.querySelector('.style-one').addEventListener('click', switchToStyleOne)
-        document.querySelector('.style-two').addEventListener('click', switchToStyleTwo)
-        document.querySelector('.style-three').addEventListener('click', switchToStyleThree)
+        document.querySelector('.style-one-tab').addEventListener('click', switchToStyleOne)
+        document.querySelector('.style-two-tab').addEventListener('click', switchToStyleTwo)
+        document.querySelector('.style-three-tab').addEventListener('click', switchToStyleThree)
     })
 }
 

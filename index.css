@@ -9,13 +9,14 @@ main {
     display: flex;
     justify-content: space-between;
     width: 1000px;
+    height: 1000px;
 }
 
 .wedding-input {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 700px;
+    height: 500px;
     width: 300px;
     border-right: 3px solid grey;
 }
@@ -23,10 +24,9 @@ main {
 .wedding-preview {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    padding-left: 5px;
-    height: 700px;
+    height: 1000px;
     width: 700px;
 }
 
@@ -36,7 +36,7 @@ main {
 }
 
 .user-supplied {
-    font-size: 150%
+    font-size: 300%
 }
 
 .print {
