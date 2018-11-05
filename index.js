@@ -19,8 +19,26 @@ const handleLocationChange = (event) => {
 
 const getCurrentStyle = () => {
     const classList = document.querySelector('.wedding-preview').classList;
-    const classArray = Array.from(classList)
-    return classArray[1]
+    
+    // Compact Version!
+    // Only works if the preview style is always
+    // the second thing in the list, though.
+    // So probably not a great idea.
+
+    // const classArray = Array.from(classList)
+    // return classArray[1]
+
+    // Explicit Version!
+    if (classList.contains('princess')) {
+        return 'princess'
+    } else if (classList.contains('print')) {
+        return 'print'
+    } else if (classList.contains('bumblebee')) {
+        return 'bumblebee'
+    } else {
+        console.error('Class list does not contain any known invitation style.')
+    }
+
 }
 
 const switchToStyleOne = () => {
