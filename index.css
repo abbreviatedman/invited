@@ -8,7 +8,7 @@ body {
 main {
     display: flex;
     justify-content: space-between;
-    width: 600px;
+    width: 1000px;
 }
 
 .wedding-input {
@@ -22,11 +22,12 @@ main {
 
 .wedding-preview {
     display: flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding-left: 5px;
     height: 700px;
-    width: 300px;
+    width: 700px;
 }
 
 .style-tabs {
@@ -34,17 +35,64 @@ main {
     justify-content: space-around;
 }
 
-.goth {
-    color: red;
-    background-color: black;
+.user-supplied {
+    font-size: 150%
+}
+
+.print {
+    background: url(wedding-background-1.png) blue;
+    background-size: cover; 
+    background-repeat: no-repeat;  
+    font-family: 'Dancing Script', cursive;
+    /* font-size: 1.5em */
 }
 
 .princess {
-    color: pink;
-    background-color :purple;
+    color: purple;
+    background-color :pink;
 }
 
-.bee {
+.bumblebee {
     color: yellow;
     background-color: black;
+}
+
+
+/* code from http://css.maxdesign.com.au/listamatic/horizontal05.htm */
+
+.style-tabs {
+    padding: 3px 0;
+    margin-left: 0;
+    border-bottom: 1px solid #778;
+    font: bold 12px Verdana, sans-serif;
+}
+
+.style-tabs li {
+    list-style: none;
+    margin: 0;
+    display: inline;
+}
+
+.style-tabs li p {
+    padding: 3px 0.5em;
+    margin-left: 3px;
+    border: 1px solid #778;
+    border-bottom: none;
+    background: #DDE;
+    text-decoration: none;
+}
+
+.style-tabs li p:link {
+    color: #448;
+}
+
+.style-tabs li p:hover {
+    color: #000;
+    background: #AAE;
+    border-color: #227;
+}
+
+.style-tabs li p.current {
+    background: white;
+    border-bottom: 1px solid white;
 }

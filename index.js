@@ -9,15 +9,6 @@ const handleSecondNameChange = (event) => {
     document.querySelector('.second-name-preview').innerText = event.target.value
 }
 
-const handleFirstSurnameChange = (event) => {
-    document.querySelector('.first-surname-preview').innerText = event.target.value
-}
-
-
-const handleSecondSurnameChange = (event) => {
-    document.querySelector('.second-surname-preview').innerText = event.target.value
-}
-
 const handleDateChange = (event) => {
     document.querySelector('.date-preview').innerText = event.target.value
 }
@@ -33,32 +24,45 @@ const getCurrentStyle = () => {
 }
 
 const switchToStyleOne = () => {
-    const currentStyle = getCurrentStyle();
     const weddingPreview = document.querySelector('.wedding-preview')
+    const currentTabText = document.querySelector('.style-one-text')
+    const oldTabText = document.querySelector('.current')
+
+    const currentStyle = getCurrentStyle();
 
     weddingPreview.classList.replace(currentStyle, 'princess');
+    currentTabText.classList.toggle('current')
+    oldTabText.classList.toggle('current')
 }
 
 const switchToStyleTwo = () => {
-    const currentStyle = getCurrentStyle();
     const weddingPreview = document.querySelector('.wedding-preview')
+    const currentTabText = document.querySelector('.style-two-text')
+    const oldTabText = document.querySelector('.current')
+    
+    const currentStyle = getCurrentStyle();
 
-    weddingPreview.classList.replace(currentStyle, 'goth');
+    weddingPreview.classList.replace(currentStyle, 'print');
+    currentTabText.classList.toggle('current')
+    oldTabText.classList.toggle('current')
 }
 
 const switchToStyleThree = () => {
-    const currentStyle = getCurrentStyle();
     const weddingPreview = document.querySelector('.wedding-preview')
+    const currentTabText = document.querySelector('.style-three-text')
+    const oldTabText = document.querySelector('.current')
+    
+    const currentStyle = getCurrentStyle();
 
-    weddingPreview.classList.replace(currentStyle, 'bee');
+    weddingPreview.classList.replace(currentStyle, 'bumblebee');
+    currentTabText.classList.toggle('current')
+    oldTabText.classList.toggle('current')
 }
 
 const init = () => {
     document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.first-name-input').addEventListener('keyup', handleFirstNameChange)
         document.querySelector('.second-name-input').addEventListener('keyup', handleSecondNameChange)
-        document.querySelector('.first-surname-input').addEventListener('keyup', handleFirstSurnameChange)
-        document.querySelector('.second-surname-input').addEventListener('keyup', handleSecondSurnameChange)
         document.querySelector('.date-input').addEventListener('keyup', handleDateChange)
         document.querySelector('.location-input').addEventListener('keyup', handleLocationChange)
 

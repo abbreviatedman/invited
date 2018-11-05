@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Invited</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet"> 
     <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
     <script src="index.js" defer></script>
 </head>
@@ -15,30 +16,20 @@
     
     <main>
         <form class="wedding-input">
-            <section class="style-tabs">
-                <h3 class="style-one">Princess</h3>
-                <h3 class="style-two">Goth</h3>
-                <h3 class="style-three">Bee</h3>
-            </section>
+            <ul class="style-tabs">
+                <li class="style-one"><p class="style-one-text current">Princess</p></li>
+                <li class="style-two"><p class="style-two-text">Print</p></li>
+                <li class="style-three"><p class="style-three-text">Bumblebee</p></li>
+            </ul>
 
             <section class="first-name-input">
-              <label for="first-name">First Name</label>
-              <input type="text" name="first-name" class="first-name">
+                <label for="first-name">First Name</label>
+                <input type="text" name="first-name" class="first-name">
             </section>
 
             <section class="second-name-input">
-              <label for="second-name">Second Name</label>
-              <input type="text" name="second-name" class="second-name">
-            </section>
-
-            <section class="first-surname-input">
-              <label for="first-surname">First (Or Only) Surname</label>
-              <input type="text" name="first-surname" class="first-surname">
-            </section>
-
-            <section class="second-surname-input">
-              <label for="second-surname">Second Surname (If Appropriate)</label>
-              <input type="text" name="second-surname" class="second-surname">
+                <label for="second-name">Second Name</label>
+                <input type="text" name="second-name" class="second-name">
             </section>
 
             <section class="date-input">
@@ -53,12 +44,14 @@
         </form>
 
         <section class="wedding-preview princess">
-            <p class="first-name-preview"></p>
-            <p class="second-name-preview"></p>
-            <p class="first-surname-preview"></p>
-            <p class="second-surname-preview"></p>
-            <p class="date-preview"></p>
-            <p class="location-preview"></p>
+            <p>Please join</p>
+            <p class="first-name-preview user-supplied"></p>
+            <p>and</p>
+            <p class="second-name-preview user-supplied"></p>
+            <p>as they wed on</p>
+            <p class="date-preview user-supplied"></p>
+            <p>in</p>
+            <p class="location-preview user-supplied"></p>
         </section>
     </main>
 </body>
